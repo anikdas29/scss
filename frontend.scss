@@ -1,0 +1,59 @@
+//Abstracts
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+//Base
+@import "base/animations";
+@import "base/base";
+//I don't want somehow add any dependent on this website
+//@import "base/fontAndIcon/fontawesome";
+//@import "base/layout-gridbox";
+@import "base/layout-flexbox";
+@import "base/layout-respond";
+@import "base/typography";
+@import "base/utilities";
+
+
+ 
+//Components
+@import "components/button";
+@import "components/form";
+@import "components/boxdesign";
+
+
+
+@import "pages/frontend/header";
+@import "pages/frontend/footer";
+@import "pages/frontend/home";
+@import "pages/frontend/domain";
+@import "pages/frontend/login_signup_restore";
+@import "pages/frontend/profile";
+@import "pages/frontend/order";
+@import "pages/frontend/server";
+
+
+@import "base/anp-icon";
+
+img{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: #F9F9F9 !important;
+}
+
+
+.category{
+    padding: 20px 50px;
+    height: 100%;
+    background-color: #f5f5f5;
+    list-style: none;
+    ul{
+        padding: 10px 20px;
+        li{
+            list-style: none;
+            padding: 5px 0;
+        }
+    }
+}

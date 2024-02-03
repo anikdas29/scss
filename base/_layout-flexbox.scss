@@ -1,0 +1,81 @@
+//anpdbcontain row
+.row{
+    width: 100%;
+    min-height: 1.5rem;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: var(--gather);
+    &:not(:last-child){
+        margin-bottom: var(--gather);
+    }
+}
+@include respond('tab-752'){
+    :root{
+        --gather : 16px;
+    }
+}
+
+
+
+//  => In column width
+// |---------------------
+// | (1 : 8.3334%), (2 : 16.6667%), (3 : 25%), (4 : 33.3334%), (5 : 41.6667%), (6 : 50%), (7 : 58.3334%), (8 : 66.6667%), (9 : 75%), (10 : 83.3334%), (11 : 91.6667%), (12 : 100%)
+// |---------------------
+@mixin columnWidth {
+    &-1{
+        width: calc((100% - (var(--gather) * 11)) / 12);
+        flex: 0 1 calc((100% - (var(--gather) * 11)) / 12);
+    }
+    &-2{
+        width: calc((((100% - (var(--gather) * 11)) / 12) * 2) + (var(--gather) * 1));
+        flex: 0 1 calc((((100% - (var(--gather) * 11)) / 12) * 2) + (var(--gather) * 1));
+    }
+    &-3{
+        width: calc((((100% - (var(--gather) * 11)) / 12) * 3) + (var(--gather) * 2));
+        flex: 0 1 calc((((100% - (var(--gather) * 11)) / 12) * 3) + (var(--gather) * 2));
+    }
+    &-4{
+        width: calc((((100% - (var(--gather) * 11)) / 12) * 4) + (var(--gather) * 3));
+        flex: 0 1 calc((((100% - (var(--gather) * 11)) / 12) * 4) + (var(--gather) * 3));
+    }
+    &-5{
+        width: calc((((100% - (var(--gather) * 11)) / 12) * 5) + (var(--gather) * 4));
+        flex: 0 1 calc((((100% - (var(--gather) * 11)) / 12) * 5) + (var(--gather) * 4));
+    }
+    &-6{
+        width: calc((((100% - (var(--gather) * 11)) / 12) * 6) + (var(--gather) * 5));
+        flex: 0 1 calc((((100% - (var(--gather) * 11)) / 12) * 6) + (var(--gather) * 5));
+    }
+    &-7{
+        width: calc((((100% - (var(--gather) * 11)) / 12) * 7) + (var(--gather) * 6));
+        flex : 0 1 calc((((100% - (var(--gather) * 11)) / 12) * 7) + (var(--gather) * 6));
+    }
+    &-8{
+        width: calc((((100% - (var(--gather) * 11)) / 12) * 8) + (var(--gather) * 7));
+        flex: 0 1 calc((((100% - (var(--gather) * 11)) / 12) * 8) + (var(--gather) * 7));
+    }
+    &-9{
+        width: calc((((100% - (var(--gather) * 11)) / 12) * 9) + (var(--gather) * 8));
+        flex: 0 1 calc((((100% - (var(--gather) * 11)) / 12) * 9) + (var(--gather) * 8));
+    }
+    &-10{
+        width: calc((((100% - (var(--gather) * 11)) / 12) * 10) + (var(--gather) * 9));
+        flex: 0 1 calc((((100% - (var(--gather) * 11)) / 12) * 10) + (var(--gather) * 9));
+    }
+    &-11{
+        width: calc((((100% - (var(--gather) * 11)) / 12) * 11) + (var(--gather) * 10));
+        flex: 0 1 calc((((100% - (var(--gather) * 11)) / 12) * 11) + (var(--gather) * 10));
+    }
+    &-12{
+        width: 100%;
+        flex: 0 1 100%;
+    }
+}
+
+
+// row column style
+.col{
+    @include columnWidth;
+}
+

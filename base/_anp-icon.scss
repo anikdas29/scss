@@ -1,0 +1,72 @@
+[class^="anp-"]{
+    mask-size: cover;
+    background-color: rgba(0,0,0,1);
+    width: 24px;
+    height: 24px;
+}
+
+.anp{
+    &-user{
+        mask-image: url(../img/icon/user.svg);
+    }
+    &-user-light{
+        mask-image: url(../img/icon/user-light.svg);
+    }
+    &-email{
+        mask-image: url(../img/icon/email.svg);
+    }
+    &-key{
+        mask-image: url(../img/icon/key.svg);
+        &-light{
+            mask-image: url(../img/icon/key-light.svg);
+        }
+    }
+    &-alert{
+        mask-image: url(../img/icon/notification.svg);
+        
+    }
+
+    &-reset{
+        mask-image: url(../img/icon/reset.svg);
+        &-light{
+            mask-image: url(../img/icon/reset-light.svg);
+        }
+    }
+    &-message{
+        mask-image: url(../img/icon/chat.svg);
+    }
+    &-menu{
+        mask-image: url(../img/icon/menu.svg);
+    }
+    &-card{
+        mask-image: url(../img/icon/card.svg);
+    }
+    &-link{
+        mask-image: url(../img/icon/link.svg);
+    }
+
+    //Social
+    &-facebook{
+        mask-image: url(../img/icon/facebook.svg);
+        &-orginal{
+            background-image: url(../img/icon/facebook.svg);
+            background-color: transparent;    
+        }
+    }
+    &-whatsapp{
+        mask-image: url(../img/icon/whatsapp.svg);
+        &-orginal{
+            background-image: url(../img/icon/whatsapp.svg);
+            background-color: transparent;    
+        }
+    }
+    &-gmail{
+        mask-image: url(../img/icon/gmail.svg);
+        &-orginal{
+            background-image: url(../img/icon/gmail.svg);
+            background-color: transparent;    
+        }
+    }
+
+    
+}

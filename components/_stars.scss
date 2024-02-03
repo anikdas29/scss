@@ -1,0 +1,33 @@
+.starArea{
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+      &__count{
+          background-color: var(--primary-color);
+          padding: 1px 3px;
+          font-size: small;
+          color: var(--clr-white);
+          border: 1px solid var(--border-color);
+          border-radius: 2px;
+          margin-right: 1rem;
+          line-height: normal;
+      }
+      &__stars{
+          --percent: calc(var(--rating) / 5 * 100%);
+          display: inline-block;
+          font-size: x-large;
+          font-family: Times; // make sure ★ appears correctly
+          line-height: 1;
+          &::before {
+            content: '★★★★★';
+            letter-spacing: 3px;
+            background: linear-gradient(90deg, var(--dark-clr-yellow) var(--percent), var(--dark-invert-color) var(--percent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+      }
+      &__counter{
+          font-size: smaller;
+          color: var(--dark-primary-color);
+      }
+}

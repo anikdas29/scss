@@ -1,0 +1,39 @@
+.about{
+    padding: 2rem 0;
+    margin:2rem 0;
+    background-color: rgba($white, 1);
+    &__imgArea{
+        height:100%;
+        width:100%;
+        padding: 2rem;
+        overflow: hidden;
+        &--img{
+            height:auto;
+            width:100%;
+            -webkit-transition: all 0.2s;
+            -o-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            transition: all 0.2s;
+            &:hover{
+                -webkit-transform: scale(1.04);
+                -moz-transform: scale(1.04);
+                    -ms-transform: scale(1.04);
+                    -o-transform: scale(1.04);
+                        transform: scale(1.04);
+            }
+        }
+    }
+    &__textArea{
+        padding:2rem 1rem;
+        &--heading{
+            color:rgba($txt-color-5, 0.95);
+            font-size: 2.2rem;
+            font-weight: bold;
+        }
+        &--paragraph{
+            color:rgba($txt-color-5, 0.6);
+            line-height: 2.6rem;
+        }
+    }
+    
+}

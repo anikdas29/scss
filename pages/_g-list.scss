@@ -1,0 +1,8 @@
+.unoderlist{
+    &__item{
+        list-style-type: none;
+        &:not(:last-child){
+            margin-bottom: 0.4rem;
+        }
+    }
+}

@@ -1,0 +1,283 @@
+@include respond('tab-752', 'max-width'){
+    .mblMargin{
+        padding: 0 10px;
+    }   
+}
+
+.img{
+    image-rendering: -webkit-optimize-contrast;
+}
+
+
+
+.align{
+    &-center{
+        align-items: center;
+    }
+}
+.text-center{
+    text-align: center;
+}
+
+.pos{
+    &-fixed{
+        position: fixed;
+    }
+    &-absolute{
+        position: absolute;
+    }
+    &-relative{
+        position: relative;
+    }
+}
+
+.center{
+    &-flex{
+        @include center();
+    }
+    &-position{
+        @include center('position');
+    }
+}
+
+.text{
+    &-center{
+        text-align: center;
+    }
+    &-right{
+        text-align: right;
+    }
+}
+
+.mb-0{
+    margin-bottom: 0;
+}
+
+
+//Hide area up to selected area
+.hide{
+    &-1760{
+        @include respond('dsk-1760'){
+            display: none!important;
+        }
+    }
+    &-1472{
+        @include respond('dsk-1472'){
+            display: none!important;
+        }
+    }
+    &-1280{
+        @include respond('dsk-1280'){
+            display: none!important;
+        }
+    }
+    &-1136{
+        @include respond('tab-1136'){
+            display: none!important;
+        }
+    }
+    &-944{
+        @include respond('tab-944'){
+            display: none!important;
+        }
+    }
+    &-752{
+        @include respond('tab-752'){
+            display: none!important;
+        }
+    }
+    &-560{
+        @include respond('mbl-560'){
+            display: none!important;
+        }
+    }
+    &-414{
+        @include respond('mbl-414'){
+            display: none!important;
+        }
+    }
+    &-360{
+        @include respond('mbl-360'){
+            display: none!important;
+        }
+    }
+}
+
+
+//Hide area minimum area
+.hide-upto{
+    &-1760{
+        @include respond('1760px', 'min-width'){
+            display: none!important;
+        }
+    }
+    &-1472{
+        @include respond('1472px', 'min-width'){
+            display: none!important;
+        }
+    }
+    &-1280{
+        @include respond('1280px', 'min-width'){
+            display: none!important;
+        }
+    }
+    &-1136{
+        @include respond('1136px', 'min-width'){
+            display: none!important;
+        }
+    }
+    &-944{
+        @include respond('944px', 'min-width'){
+            display: none!important;
+        }
+    }
+    &-752{
+        @include respond('750px', 'min-width'){
+            display: none!important;
+        }
+    }
+    &-560{
+        @include respond('560px', 'min-width'){
+            display: none!important;
+        }
+    }
+    &-414{
+        @include respond('414px', 'min-width'){
+            display: none!important;
+        }
+    }
+    &-360{
+        @include respond('360px', 'min-width'){
+            display: none!important;
+        }
+    }
+}
+
+
+// d-none worked normally and hide work with also !important
+.hide{
+    display:none!important;
+}
+
+
+.d{
+    &-none{
+        display: none ; //Not add important code use hide code
+    }
+    &-inline-block{
+        display: inline-block;
+    }
+    &-block{
+        display: block;
+    }
+    &-flex{
+        display:flex;
+    }
+}
+
+
+.bg{
+    @include color('background', 'black');
+    @include color('background', 'white');
+    @include color('background', 'green');
+    @include color('background', 'red');
+    @include color('background', 'yellow');
+    @include color('background', 'blue');
+    @include color('background', 'primary');
+}
+
+
+.clr{
+    @include color('color', 'black');
+    @include color('color', 'white');
+    @include color('color', 'green');
+    @include color('color', 'red');
+    @include color('color', 'yellow');
+    @include color('color', 'blue');
+    @include color('color', 'primary');
+}
+
+
+//space
+.space{
+    &-top{
+        margin-top:30px;
+    }
+    &-bottom{
+        margin-bottom: 30px;
+    }
+}
+
+.p{
+    &t-1{
+        padding-top: 1rem;
+    }
+    &t-2{
+        padding-top: 2rem;
+    }
+    &t-3{
+        padding-top: 3rem;
+    }
+
+    &b-1{
+        padding-bottom: 1rem;
+    }
+    &b-2{
+        padding-bottom: 2rem;
+    }
+    &b-3{
+        padding-bottom: 3rem;
+    }
+    
+    &r-1{
+        padding-right: 1rem;
+    }
+    &r-2{
+        padding-right: 2rem;
+    }
+    &r-3{
+        padding-right: 3rem;
+    }
+
+    &l-1{
+        padding-left: 1rem;
+    }
+    &l-2{
+        padding-left: 2rem;
+    }
+    &l-3{
+        padding-left: 3rem;
+    }
+
+    &-1{
+        padding: 1rem;
+    }
+    &-2{
+        padding: 2rem;
+    }
+    &-3{
+        padding: 3rem;
+    }
+    &-4{
+        padding: 4rem;
+    }
+    &-5{
+        padding: 5rem;
+    }
+    &-m{
+        @include respond(){
+            padding: 1.2rem !important;
+        }
+        
+    }
+}
+
+.mb{
+    margin-bottom: var(--gather);
+}
+
+
+.clr-primary{
+    color: rgba(var(--primary), 1) !important;
+}
+

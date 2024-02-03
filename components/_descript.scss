@@ -1,0 +1,44 @@
+.descript{
+    &__heading{
+        clear: both;
+        display: block;
+        padding-bottom: 1.5rem;
+        font-size: inherit;
+        font-weight: bold;
+    }
+    &__para{
+        clear: both;
+        display: block;
+        padding-bottom: 1.5rem;
+        font-size: inherit;
+    }
+    &__bold{
+        display: inline-block;
+        font-size: large;
+        font-weight: bold;
+    }
+    &__upper{
+        display: inline-block;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    &__link{
+        display: inline-block;
+        font-size: medium;
+        color: inherit!important;
+        text-decoration: underline;
+        &:hover, &:focus{
+            color: inherit!important;
+        }
+    }
+    &__large{
+        font-size: larger;
+    }
+    &__small{
+        font-size: small;
+    }
+    &__space{
+        padding-left: 2rem;
+        padding-top: 1rem;
+    }
+}

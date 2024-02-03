@@ -1,0 +1,37 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #ccc;
+    text-align: left;
+}
+  
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+th{
+    background-color: rgb(165, 165, 165);
+    font-family: varela;
+    letter-spacing: 0.5px;
+    font-size: 18px;
+    padding: 0.5rem 0;
+    padding-left: 0.3rem;
+    cursor: context-menu;
+
+    &:not(:last-child){
+        border-right: 1px solid #b8b8b8;
+    }
+    &:first-child{
+        border:none;
+        border-right:1px solid #b8b8b8;
+        border-top-left-radius: 0.8rem;
+    }
+    &:last-child{
+        border: none;
+        border-top-right-radius: 0.8rem;
+    }
+}

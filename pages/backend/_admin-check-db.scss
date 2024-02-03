@@ -1,0 +1,190 @@
+
+*{
+    margin: 0;
+    padding:0;
+}
+.checkDb{
+    font-family:"lato", sans-serif;
+    position: relative;
+    height:100vh;
+    width:100%;
+    box-shadow:inset 0 0 20px rgba(0,0,0, 0.1);
+    background: rgba(255,255,255, 1);
+}
+
+//style for Index page
+.icon_box{
+    position: absolute;
+    top:8%;
+    left:7%;
+}
+.icon_box-back, .icon_box-home{
+    display: inline-block;
+    box-shadow: 0 0 4px rgba(0,0,0, 0.2);
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    background-image: radial-gradient( rgb(170, 28, 75), rgb(32, 3, 138));
+}
+.icon_box-back{
+    transform: rotate(180deg);
+}
+.icon_box-back span{
+    font-size: 21px;
+    vertical-align: middle;
+    color:#fff;
+}
+.icon_box-home span{
+    font-size: 18px;
+    vertical-align: middle;
+}
+.success_box{
+    display: inline-block;
+    height:40vh;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+} 
+.success_text{
+    display:block;
+    text-align: center;
+    margin-top: 12px;
+}
+.success_text-text{
+    font-size:42px;
+    background-image: linear-gradient(to bottom, rgb(150, 223, 143), rgb(76, 148, 69));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color:transparent;
+    font-weight: 700;
+    @include respond('lmbl'){
+        font-size: 30px;
+    }
+}
+.success_icon {
+    display: inline-block;
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+    border: 6px solid rgb(150, 223, 143);
+    background-color: rgb(235, 252, 233);
+    box-shadow: inset 0 0 10px rgba(150,223,143, 0.5);
+    position: relative;
+    overflow: hidden;
+    -webkit-transform-origin: center;
+        transform-origin: center;
+    -webkit-animation: showSuccess 180ms ease-in-out;
+        animation: showSuccess 180ms ease-in-out;
+}
+.success_icon-tip, .success_icon-long {
+    display: block;
+    position: absolute;
+    height: 6px;
+    background-color: rgb(123, 202, 116);
+    border-radius: 10px;
+}
+.success_icon-tip {
+    width: 2.4em;
+    top: 4.3em;
+    left: 1.4em;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-animation: tipInPlace 300ms ease-in-out;
+            animation: tipInPlace 300ms ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-delay: 180ms;
+            animation-delay: 180ms;
+    visibility: hidden;
+}
+.success_icon-long {
+    width: 4em;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: 3.7em;
+    left: 2.75em;
+    -webkit-animation: longInPlace 140ms ease-in-out;
+            animation: longInPlace 140ms ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    visibility: hidden;
+    -webkit-animation-delay: 440ms;
+            animation-delay: 440ms;
+}
+@-webkit-keyframes showSuccess {
+    from {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    to {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+}
+  
+@keyframes showSuccess {
+    from {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    to {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+}
+@-webkit-keyframes tipInPlace {
+    from {
+      width: 0em;
+      top: 0em;
+      left: -1.6em;
+    }
+    to {
+      width: 2.4em;
+      top: 4.3em;
+      left: 1.4em;
+      visibility: visible;
+    }
+}
+@keyframes tipInPlace {
+    from {
+      width: 0em;
+      top: 0em;
+      left: -1.6em;
+    }
+    to {
+      width: 2.4em;
+      top: 4.3em;
+      left: 1.4em;
+      visibility: visible;
+    }
+}
+@-webkit-keyframes longInPlace {
+    from {
+      width: 0em;
+      top: 5.1em;
+      left: 3.2em;
+    }
+    to {
+      width: 4em;
+      top: 3.7em;
+      left: 2.75em;
+      visibility: visible;
+    }
+}
+@keyframes longInPlace {
+    from {
+      width: 0em;
+      top: 5.1em;
+      left: 3.2em;
+    }
+    to {
+      width: 4em;
+      top: 3.7em;
+      left: 2.75em;
+      visibility: visible;
+    }
+}

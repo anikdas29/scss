@@ -1,0 +1,247 @@
+/*popup*/
+.login, .signUp, .verify, .newpas, .restore, .overlay {
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.9);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	opacity: 0;
+	visibility: hidden;
+	&:target{
+		opacity: 1;
+		visibility: visible;
+	}
+	&__area{
+		height: 380px;
+		width: 340px;
+		border: 1px solid #e8e8e8;
+		background-color: white;
+		border-radius: 8px;
+		transform: translateY(50px);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 24px;
+		position: relative;
+		&--form{
+			text-align: center;
+			.number-code{
+			  	width: 100%;
+			 	 margin-bottom: 20px; 
+			  	& > div{
+					display: flex;
+					width: 300px;
+					flex-direction: row;
+					justify-content: space-between;
+					padding: 10px;
+					& > input{
+						width: calc(200px / 6);
+						height: 25px;
+						padding: 5px; 
+					}
+				}
+			}
+		}
+		&--inputText, &--inputPassword{
+			margin-bottom: 10px!important; 
+		}
+		&--label{
+			text-align: left;
+			display: block;
+			color: #666;
+			margin: 0;
+		}
+		&--submit{
+			width: 100%;
+			animation: none;
+			border-radius: 8px; 
+		}
+		&--close{
+			position: absolute;
+			top: 10px;
+			right: 10px; 
+			&-icon{
+			  height: 15px;
+			  width: 15px;
+			  transform: rotateZ(45deg); 
+			}
+		}
+	}
+
+	&_message{
+		line-height: normal;
+    	font-size: 13px;
+    	margin-bottom: 12px;
+	}
+	&__heading{
+		font-size: 24px;
+	  	margin-bottom: 10px;
+	  	line-height: normal;
+  	}
+}
+
+.overlay{
+	opacity: 1;
+	visibility: visible;
+}
+
+.signUp__area {
+	height: 440px; //For increasing 2 fill
+}
+
+.restore__area {
+	height: 300px; 
+}
+	
+.verify__area {
+	height: 250px; 
+}
+.newpas__area {
+	height: 300px; 
+}
+
+
+
+///Shopping
+.shopping{
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2500;
+	opacity: 0;
+	visibility: hidden;
+	display: flex;
+	justify-content: flex-end;
+	&:target{
+		opacity: 1;
+		visibility: visible;
+	}
+	&:target &__area{
+		right:8px;
+	}
+	&__heading{
+		font-size: 24px;
+	  	margin-bottom: 10px;
+	  	line-height: normal;
+	}
+	&__area{
+		border: 1px solid var(--border);
+		background-color: white;
+		padding: 20px;
+		position: relative;
+		width: 360px;
+		height: inherit;
+		right:-240px;
+		transition: right 0.3s linear;
+		overflow-y: scroll;
+		&--close{
+			position: absolute;
+			top: 10px;
+			right: 10px; 
+			&-icon{
+			  height: 15px;
+			  width: 15px;
+			  transform: rotateZ(45deg); 
+			}
+		}
+	}
+	&__area::-webkit-scrollbar {
+		width: 0px;
+		background-color: red; 
+	}
+
+//Card produts design
+	.cardProducts {
+		width: 100%;
+		border-bottom: 1px solid var(--border);
+		border-top: 1px solid var(--border);
+		&__product{
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+			padding: 10px 0;
+			&--img {
+				height: 100%;
+				width: 70px;
+				border: 1px solid var(--border);
+			}
+			&--headPriceDel{
+				max-width: 100%;
+				flex-grow: 1;
+				padding-left: 5px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				&-heading{
+					font-size: 12px;
+					font-weight: normal;
+					color: rgba(var(--black-rgba), 0.6);
+					text-transform: uppercase;
+				}
+				&-border{
+					width: 30px;
+					padding: 2px;
+					border: 1px solid var(--border);
+					padding: 3px 5px;
+					margin: 0 2px;
+					i{
+						color: #3ce756;
+						&:hover{
+							color: #3ce756;
+						}
+					}
+				}
+				&-cursor{
+					cursor: pointer;
+				}
+			}
+		}
+		&_checkout{
+			margin-top: 50px;
+			margin-bottom: 20px;
+			&-price{
+				display: flex;
+				margin: 10px;
+				border: 1px solid var(--dark-primary);
+				align-items: center;
+				.total{
+					flex: 0 1 42%;
+					padding: 10px;
+					background: var(--primary);
+					font-size: 20px;
+					line-height: normal;
+					color: var(--dark-primary);
+				}
+
+				.price {
+					flex-grow: 1;
+					color: black;
+					font-size: 24px;
+					text-align: right;
+					padding: 0 10px 0 0; 
+				}
+			}
+			&-btn{
+				font-size: 18px;
+				margin: 10px;
+				text-align: center;
+				display: block;
+				text-decoration: none;
+				padding: 5px 13px;
+				color: #fff;
+				border-radius: 5px;
+				background-color: var(--dark-primary); 
+			}
+		}
+	}
+}

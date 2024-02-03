@@ -1,0 +1,51 @@
+//For Tab, iPad abd Notpad Device
+.dsk-1760{
+    @include respond('dsk-1760', 'max-width'){
+        @include columnWidth;
+    }
+}
+
+.dsk-1472{
+    @include respond('dsk-1472', 'max-width'){
+        @include columnWidth;
+    }
+}
+
+.dsk-1280{
+    @include respond('dsk-1280', 'max-width'){
+        @include columnWidth;
+    }
+}
+
+
+.tab-1136{
+    @include respond('tab-1136', 'max-width'){
+        @include columnWidth;
+    }
+}
+
+
+//For mini and large desktop
+.tab-944{
+    @include respond('tab-944', 'max-width'){
+        @include columnWidth;
+    }
+}
+
+.tab-752{
+    @include respond('tab-752', 'max-width'){
+        @include columnWidth;
+    }
+}
+
+//Respond For mobile device
+.mbl-560{
+    @include respond('mbl-560', 'max-width'){
+        @include columnWidth;
+    }
+}
+.mbl-414{
+    @include respond('mbl-414', 'max-width'){
+        @include columnWidth;
+    }
+}

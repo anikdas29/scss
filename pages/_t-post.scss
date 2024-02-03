@@ -1,0 +1,197 @@
+.post{
+    overflow: scroll;
+    min-height: calc(100vh - 10vh);
+    &__heading{
+        margin-top: 1rem;
+        display: block;
+    } 
+    &__add{
+        margin:1.8rem 0.5rem;
+        cursor: context-menu;
+        &--button{
+            padding: 0.5rem 1.2rem;
+            border-radius: 0.8rem;
+            border:1px solid #9d9d9d;
+            box-shadow: 0 0 4px rgba(0,0,0,0.5);
+        }
+    }
+    &__form{
+        border:1px solid rgb(45, 114, 175);
+        margin: 0 1rem;
+        border-radius: 0.6rem;
+        display: none;
+        overflow: hidden;
+        &--heading{
+            background-color: rgb(51, 122, 183);
+            padding:0.8rem 1.2rem;
+            color:white;
+            font-weight: 700;
+            letter-spacing: 0.1rem;
+        }
+        &--main{
+            padding: 1rem 0.2rem;
+        }
+        &--fill{
+            display: flex;
+            align-items: flex-end;
+            flex-direction: row;
+            justify-content:flex-start;
+            padding:0.5rem 1rem;
+            position: relative;
+            :not(:last-child){
+                margin-bottom: 1rem;
+            }
+            &-label{
+                color:#fff;
+                background-color: rgba(135, 139, 142, 0.9);
+                border:1px solid rgb(135, 139, 142);
+                outline:none;
+                height:2rem;
+                width:2rem;
+                font-weight: bold;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 2rem;
+                font-size: 1.2rem;
+                transition: all 0.3s;
+            }
+            &-input{
+                width: 100%;
+                height:4rem;
+                margin:1rem 0.5rem;
+                padding:0.6rem 0.8rem;
+                border:none;
+                border-bottom:2px solid rgb(135, 139, 142);
+                z-index:1;
+                &:focus{
+                    outline: none;
+                    border:none;
+                    border-bottom:2px solid #6a95f8;
+                    box-shadow: none;
+                }
+            }
+            &-file{
+                width: 100%;
+                height:2.6rem;
+                margin:1rem 0.5rem;
+                padding:0.6rem 0.8rem;
+                border:none;
+                z-index:1;
+                &:focus{
+                    outline: none;
+                    border:none;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+    &__table{
+        margin:0 1rem;
+        &--head{
+            background-color: rgb(252, 180, 162);
+        }
+        &--input{
+            height:2.8rem;
+            width:100%;
+            border: none;
+            background-color: transparent;
+            font-size: medium;
+            padding: 0 0.5rem;
+            &:focus{
+                outline: none;
+                border: none;
+            }
+            &::placeholder{
+                padding-left: 0.5rem;
+                font-size: medium;
+                color: #666;
+                padding: 0.5rem 0.5rem;
+                font-weight: 600;
+            }
+        }
+    }
+
+    &__info{
+        margin: 1.5rem 1rem 0.5rem 1rem;
+    }
+
+    &__mIcon{
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        cursor: context-menu;
+        padding: 0.3rem 0.8rem;
+        color:rgb(255, 255, 255);
+        letter-spacing: 0.1rem;
+        font-weight: bold;
+        text-transform: capitalize;
+        border-radius: 0.8rem;
+        &:not(:last-child){
+            margin-right: 2rem;
+        }
+
+        &-save{
+            background-color: #17ac6a;
+        }
+        &-update{
+            background-color: #6a95f8;
+        }
+        &-delete{
+            background-color: #e34b4b;
+        }
+    }
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: rgb(230, 230, 230);
+    background-image: none;
+    &:focus, &:hover{
+        outline:none;
+    }
+  }
+  /* Remove IE arrow */
+  select::-ms-expand {
+    display: none;
+  }
+  /* Custom Select */
+  .select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: rgb(230, 230, 230);
+    overflow: hidden;
+    border-radius: .25em;
+  }
+  select {
+    flex: 1;
+    padding: 0 .5em;
+    color: rgb(34, 34, 34);
+    cursor: pointer;
+  }
+  /* Arrow */
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: rgb(197, 197, 197);
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+  }
+  /* Transition */
+  .select:hover::after {
+    color: #f39c12;
+  }

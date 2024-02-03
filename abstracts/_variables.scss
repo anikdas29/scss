@@ -1,0 +1,66 @@
+//For Mobile Device
+$mbl-360 : 360px;  // (360*640)   [ 360/9 = 40 ] 9:16
+$mbl-414 : 414px;  // (414*736)   [ 414/9 = 46 ] 9:16
+$mbl-560 : 560px;  // (560*315)   [ 560/16 = 35] 16:9
+
+//For Tab, iPad abd Notpad Device
+$tab-752  : 712px;  // (752*429)   [ 752/16 = 47 ] 16:9
+$tab-944  : 900px;  // (944*531)   [ 944/16 = 59 ] 16:9
+$tab-1136 : 1080px; // (1136*639)  [ 1136/16 = 71 ] 16:9
+
+//For laptop and desktop
+$dsk-1280 : 1222px; // (1280*720)->80  [ 1280/16 = 80 ] 16:9
+$dsk-1472 : 1422px; // (1472*828)->100 [ 1472/16 = 92 ] 16:9
+$dsk-1760 : 1700px; // (1760*990)->120 [ 1760/16 = 110 ] 16:9
+
+
+$getbrackpoint : ( // Don't change anything
+    //For Mobile Device
+    'mbl-360'  : 360px, 'mbl-414'   : 414px, 'mbl-560'   : 560px,
+
+    //For Tab, iPad abd Notpad Device
+    'tab-752'  : 752px, 'tab-944'   : 944px, 'tab-1136'  : 1136px,
+    
+    //For laptop and desktop
+    'dsk-1280' : 1280px, 'dsk-1472' : 1472px, 'dsk-1760' : 1760px
+);
+
+
+
+:root{
+    //space between two column 
+    --gather : 32px;
+    --small-gather: 16px;
+
+    
+
+
+    //font size
+    --font-size: 1.6rem;
+
+    //Body Background
+    --background: #f2f4f8;
+
+
+    //color bank
+
+    --primary : 247, 184, 127; //rgb(247, 184, 127);
+    
+    --secondary : 45, 58, 75; //rgb(45, 58, 75);
+
+    --blue: 41, 145, 219; //rgb(41, 145, 219)
+
+    --white: 255, 255, 255; //rgb(255, 255, 255)
+
+    --black: 0, 0, 0; //rgb(0, 0, 0)
+
+    --green : 20, 183, 137; //rgb(20, 183, 137)
+
+    --red : 255, 106, 106; //rgb(255, 106, 106);
+
+    --dark : 229, 0, 135, //rgb(229, 0, 135)
+
+    --yellow : 247, 168, 41; //rgb(247, 168, 41)
+
+    --violet : 128, 47, 222; //rgb(128, 47, 222);
+}

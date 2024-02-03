@@ -1,0 +1,92 @@
+// | => Scroll bar
+// |------------------------------------------------------------------------------------------------------------
+// | Need css variable : primary-color | dark-primary-color
+// | ------------------------------------------------------------------------------------------------------------
+@mixin scroll{
+    & {
+        scrollbar-color: rgba(var(--primary), 0.5) transparent;
+    }
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgba(var(--primary), 0.5)
+    }
+    &::-webkit-scrollbar-thumb:hover{
+        background: rgba(var(--primary), 1)
+    }
+}
+
+
+//  => Area centering
+// |------------------------------------------------------------------------------------------------------------
+// | $view  = display:DEFAULT | position 
+// | ------------------------------------------------------------------------------------------------------------
+@mixin center($view: "flex"){
+    @if $view == "position" {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @if $view == "flex" {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+//  =>Parameters of respond function
+// |------------------------------------------------------------------------------------------------------------
+// | $brackpoint  = mbl-360 | mbl-414 | mbl-560 | tab-752:DEFALUT | tab-944 | tab-1136 | dsk-1280 | dsk-1472 | dsk-1760 | (Your choise)
+// | $ismaxormin  = max-width:DEFAULT | min-width | width | min-height | max-height | height (your choise)
+// | $paraname    = hover | min-aspect-ratio | max-aspect-ratio | false:DEFAULT
+// | $paravalue   = hover | 4:3 | none:DEFAULT
+// | $print       = screen | print | any 
+// | ------------------------------------------------------------------------------------------------------------
+@mixin respond($brackpoint : 'tab-752', $ismaxormin : 'max-width', $paraname : "false", $paravalue : 'none', $print : 'screen') {
+    @if map-has-key($getbrackpoint, $brackpoint) and $paraname == 'false'{
+        @media only #{$print} and ( #{$ismaxormin}: map-get($getbrackpoint, $brackpoint)){ @content }; 
+    }
+    
+    @else if not map-has-key($getbrackpoint, $brackpoint) and $paraname == 'false'{
+        @media only #{$print} and ($ismaxormin: $brackpoint) { @content };
+    }
+    
+    @else if map-has-key($getbrackpoint, $brackpoint) and $paraname != 'false'{
+        @media only #{$print} and ($ismaxormin: $brackpoint) and ($paraname: $paravalue){ @content };
+    }
+    
+    @else if not map-has-key($getbrackpoint, $brackpoint) and $paraname != 'false'{
+        @media only #{$print} and ($ismaxormin: $brackpoint) and ($paraname: $paravalue){ @content };
+    }
+}
+
+
+
+//  =>Parameters of color function
+// |------------------------------------------------------------------------------------------------------------
+// | $paraname    = color:DEFAULT | background-color
+// | $paravalue   = primary | white | black | green | red | yellow | blue
+// | ------------------------------------------------------------------------------------------------------------
+@mixin color ($paraname : 'color', $paravalue : 'primary') {
+    @if $paraname == 'color'{
+        &-#{$paravalue}{
+            color: rgba(var(--#{$paravalue}), 1);
+            &:hover{
+                color: rgba(var(--#{$paravalue}), 1);
+            }
+        }
+    }
+    @else{
+        &-#{$paravalue}{
+            background-color: rgba(var(--#{$paravalue}), 1);
+            &:hover{
+                background-color: rgba(var(--#{$paravalue}), 1);
+            }
+        }
+    }
+}

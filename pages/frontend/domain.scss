@@ -1,0 +1,163 @@
+.domiFind{
+    padding: 50px 0;
+    font-size: 10px;
+    position: relative;
+    
+    &-head{
+        text-align: center;
+        color: rgba(var(--secondary), 1);
+        font-size: 3.2em;
+        line-height: normal;
+        padding-bottom: 15px;
+    }
+    &-para{
+        text-align: center;
+        color: rgba(var(--black),1);
+        font-size: 1.8em;
+    }
+    &-form{
+        padding: 25px 0;
+        @include center();
+        &-fill{
+            max-width: 600px;
+            border-radius: 0px !important;
+            border-bottom-left-radius: 6px!important;
+            border-top-left-radius: 6px!important;
+            height: 52px !important;
+            padding: 17px 12px!important;
+            font-size: 1.8em!important;
+            line-height: normal!important;
+            &::placeholder{
+                line-height: normal!important;
+                font-size: 18px!important;
+            }
+        }
+        &-submit{
+            min-width: 112px;
+            border-radius: 0px !important;
+            border-bottom-right-radius: 6px!important;
+            border-top-right-radius: 6px!important;
+            height: 52px !important;
+            background-color: rgba(var(--secondary), 1)!important;
+            color: rgba(var(--white),1);
+            font-size: 1.8em!important;
+        }
+    }
+
+    &-result{
+        padding: 10px 0;
+        @include center();
+        flex-direction: column;
+        &-Area{
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            width: 640px;
+            height: 70px;
+            border-radius: 12px;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            &-nameArea{
+                display: flex;
+                flex-direction: column;
+                flex-grow: 14;
+                line-height: normal;
+                &-name{
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    @include respond(){
+                        letter-spacing: normal;
+                    }
+                }
+                &-text{
+                    font-size: 0.75em;
+                    color: rgba(var(--black), 0.5);
+                }
+            }
+            &-price{
+                flex-grow: 2;
+                font-weight: 700;
+            }
+
+            //loading area
+            &-load{
+                border:0!important;
+                animation-duration: 4s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: infinite;
+                animation-name: placeHolderShimmer;
+                animation-timing-function: linear;
+                background: linear-gradient(to right,#ffffff 5%,#f6f6f6 10%, #eaeaea 15%, #ffffff 17%);
+                background-size: 200% 100%;
+                position: relative;
+            }
+
+            //multipal color
+            &-green{
+                color: rgba(var(--secondary), 1);
+                border:2px solid rgba(var(--green), 0.15);
+                background-color: rgba(var(--green), 0.1);
+            }
+
+            &-primary{
+                color: rgba(var(--secondary), 1);
+                border:2px solid rgba(var(--primary), 0.15);
+                background-color: rgba(var(--primary), 0.1);
+            }
+
+            &-red{
+                color: rgba(var(--secondary), 1);
+                border:2px solid rgba(var(--red), 0.15);
+                background-color: rgba(var(--red), 0.1);
+            }
+
+            &-black{
+                border:2px solid rgba(var(--black), 0.08);
+                background-color: rgba(var(--black), 0.05);
+            }
+        }
+        @include respond(){
+            &-Area{
+                width: 100%;
+                padding: 15px;
+            }
+        }
+    }
+    @include respond(){
+        &-head{
+            font-size: 2.8em;
+        }
+        &-form-submit{
+            min-width: 90px;
+        }
+    }
+}
+
+
+.domiPrice{
+    border: 1px solid rgba(var(--black),0.2);
+    border-radius: 8px;
+    @include center();
+    flex-direction: column;
+    &-head{
+        font-size: 32px;
+        line-height: normal;
+        color: rgba(var(--secondary), 1);
+        padding-bottom: 20px;
+    }
+    &-price{
+        font-size: 18px;
+        color: rgba(var(--black), 0.8);
+        &-cut{
+            font-size: 12px;
+            text-decoration:line-through;
+        }
+    }
+    &-text{
+        font-size: 16px;
+        color: rgba(var(--black), 0.5);
+    }
+    
+}

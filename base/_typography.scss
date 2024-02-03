@@ -1,0 +1,64 @@
+//Link color and hover color
+a{
+    color: rgba(var(--black), 1);
+    text-decoration: none;
+    display: inline-block;
+    &:focus, &:visited{
+        color: rgba(var(--black), 1);
+    }
+    &:hover{
+        color: rgba(var(--black), 1);
+    }
+}
+
+
+//Website text and background-color
+//Need to work in this section
+
+
+//Website Primary Heading
+// .heading{
+//     &__area{
+//         display: flex;
+//         align-items: center;
+//         justify-content: flex-start;
+//         height: 100%;
+//         width:100%;
+//     }
+    
+//     &, h1, &-primary{
+//         font-size: 2.8rem;
+//         text-transform: uppercase;
+//         font-weight: 700;
+//         line-height: normal;
+
+//         a{
+//             text-decoration: none;
+//             color: inherit;
+//         }
+//     }
+// }
+
+
+
+// .paragraph{
+//     font-size: $default-font-size;
+//     color: var(--text-color);
+
+//     &__area{
+//         padding: 1rem;
+//     }
+
+//     &__break{
+//         padding-bottom: 1.8rem;
+//     }
+
+//     p, &__para{
+//         font-size: $default-font-size;
+//         color: var(--text-color);
+//         text-align: justify;
+//         &:not(:last-child){
+//             padding-bottom: 0.5rem;
+//         }
+//     }
+// }

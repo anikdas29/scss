@@ -1,0 +1,86 @@
+// h2{
+//     font-size:18px!important;
+// }
+.profile{
+    padding-top: 10px;
+    --gather : 16px;
+    //Menu bar
+    &-menu{
+        background-color: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 20px;
+        margin: 10px;
+        &-img{
+            border-radius: 50%;
+            height: 140px;
+            width: 140px;
+            display: inline-block;
+        }
+        &-name {
+            font-size: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        &-url{
+            padding: 5px 0;
+            border-bottom: 1px solid var(--border);
+            a{
+                color: rgba(var(--black), 0.7);
+                display: block;
+                padding: 2px 8px;
+            }
+            a:hover, .active{
+                color: rgba(var(--black), 1);
+                background-color: rgba(var(--primary), 1);
+            }
+        }
+    }
+
+    //Top userinfo section
+    &-userInfo{
+        // &-welcome{
+        //     font-size: 20px;
+        //     text-transform: capitalize;
+        //     line-height: normal;
+        //     padding-bottom: 10px;
+        // }
+        &-head{
+            font-size: 16px;
+            color: rgba(var(--black), 1);
+        }
+        &-data{
+            font-size: 14px;
+            color: rgba(var(--black), 0.7);
+        }
+    }
+
+    &-odrlist{
+        &-invoice{
+            line-height: normal;
+        }
+        &-item{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
+
+
+// .userInfo .userInfo__body{
+//     padding: 10px;
+// }
+// .userInfo .userInfo__body table {
+//     border: none;
+//     font-size: 16px;
+//     width: 80%;
+// }
+// .odrfrm__label{
+//     font-size:12px;
+//     margin-bottom:0;
+// }
+// .odrfrm__formgrp{
+//     padding: 0 5px;
+//     margin-bottom:10px;
+// }

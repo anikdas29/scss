@@ -1,0 +1,273 @@
+.mainArea{
+    margin-top: 9rem!important;
+    @include respond('tab-1136'){
+        margin-top: 8rem!important;
+    }
+    @include respond(){
+        margin-top: 6rem!important;
+    }
+}
+
+.domarea, .webarea{
+    padding: 35px 0;
+    &-imageArea{
+        @include center();
+        justify-content: flex-end;
+        &-img{
+            height: fit-content;
+            width: 550px;
+        }
+        @include respond('tab-1136'){
+            &-img{
+                width: 450px;
+            }
+        }
+        @include respond('tab-944'){
+            &-img{
+                width: 350px;
+            }
+        }
+        @include respond(){
+            justify-content: center;
+            text-align: justify;
+            &-img{
+                width: 250px;
+            }
+        }
+        @include respond('mbl-414'){
+            &-img{
+                width: 200px;
+            }
+        }
+
+    }
+    .jstRight{
+        justify-content: flex-start!important;
+    }
+
+    //text Area
+    &-textArea{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+            &-left{
+                padding-right: 100px;
+            }
+            &-right{
+                padding-left: 100px;
+            }
+        &-head{
+            font-size: 28px;
+            color: rgba(var(--secondary),1);
+        }
+        &-para{
+            font-size: 18px;
+            color: rgba(var(--secondary), 1);
+        }
+        &-button{
+            background: rgba(var(--primary),1);
+            color: rgba(var(--secondary), 1);
+            padding: 12px;
+            margin: 10px 0;
+            &:hover{
+                background-color: rgba(var(--secondary), 1);
+                color: rgba(var(--white), 1);
+            }
+        }
+        @include respond('tab-944'){
+            &-head{
+                font-size: 24px;
+            }
+            &-para{
+                font-size: 16px;
+            }
+        }
+        @include respond(){
+            text-align: justify;
+            align-items: center;
+            &-head{
+                font-size: 18px;
+            }
+            &-para{
+                font-size: 14px;
+            }
+        }
+    }
+
+    //Mordern style
+    .mordify{
+        position: relative;
+        &::before{
+            content: "";
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            border: 6px solid rgba(var(--primary), 1);
+            border-radius: 50%;
+            border-left: 0;
+            border-top: 0;
+            border-bottom: 0;
+            animation-name: leftToRight;
+            animation-fill-mode: both;
+            animation-delay: 0.5s;
+            animation-duration: 2.5s;
+            @include respond(){
+                display: none;
+            }
+        } 
+    }
+    @include respond(){
+        padding: 10px 0;
+    }
+}
+
+.hostarea{
+    margin: 100px 0;
+    column-gap: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    justify-content: center;
+    @include respond(){
+        margin: 35px 0;
+    }
+    &-textArea{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 50px;
+
+        background-color: rgba(var(--primary), 1);
+        border-bottom-left-radius: 12px;
+        border-top-left-radius: 12px;
+        &-button{
+            padding: 12px;
+            margin: 10px 0;
+            background: rgba(var(--secondary),1);
+            color: rgba(var(--white), 1);
+            &:hover{
+                color: rgba(var(--primary), 1);
+            }
+        }
+        &-head{
+            font-size: 28px;
+            color: rgba(var(--secondary),1);
+        }
+        &-para{
+            font-size: 18px;
+            color: rgba(var(--secondary), 1);
+        }
+        @include respond('tab-944'){
+            &-head{
+                font-size: 24px;
+            }
+            &-para{
+                font-size: 16px;
+            }
+        }
+        @include respond(){
+            min-height: 280px;
+            align-items: center;
+            text-align: center;
+            padding: 20px 50px;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            &-head{
+                font-size: 18px;
+            }
+            &-para{
+                font-size: 14px;
+            }
+        }
+        @include respond('mbl-414'){
+            padding: 20px;
+        }
+        
+    }
+    &-imageArea{
+        @include center();
+        background-color: rgba(var(--secondary), 1);
+        border-bottom-right-radius: 12px;
+        border-top-right-radius: 12px;
+        &-img{
+            height: fit-content;
+            width: 550px;
+        }
+        @include respond('tab-1136'){
+            &-img{
+                width: 450px;
+            }
+        }
+        @include respond('tab-944'){
+            padding: 30px 0;
+            &-img{
+                width: 350px;
+            }
+        }
+        @include respond(){
+            justify-content: center;
+            text-align: justify;
+            border-bottom-right-radius: 12px;
+            border-bottom-left-radius: 12px;
+            border-top-right-radius: 0;
+            &-img{
+                width: 250px;
+            }
+        }
+        @include respond('mbl-414'){
+            &-img{
+                width: 200px;
+            }
+        }
+    }
+        
+}
+
+.webarea{
+    padding: 80px 0;
+    @include respond(){
+        padding: 35px 0;
+    }
+}
+
+
+.faq{
+    width: 95%;
+    margin: 35px auto;
+    &-heading{
+        text-align: center;
+        color: rgba(var(--secondary), 1);
+        padding-bottom: 20px;
+    }
+    &-item{
+        border-bottom: 1px solid rgba(var(--primary),0.4);
+        margin-bottom: 20px;
+        h3{
+            padding-right: 25px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            font-size: 16px;
+            color: rgba(var(--primary), 1);
+            &::after {
+                content: "\002B";
+                font-size: 2rem;
+                position: absolute;
+                right: 1rem;
+            }
+            .active::after {
+                content: "\2212";
+            }
+        }
+        p{
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+    }
+}

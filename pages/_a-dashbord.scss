@@ -1,0 +1,82 @@
+.dashbord{
+    height:100vh;
+    width:100%;
+    overflow: hidden;
+    &__row{
+        max-width:100%!important;
+    }
+    &__left{
+        height:100vh;
+        overflow: hidden;
+        box-shadow: 3px 0 10px rgba(0,0,0,0.1);
+        border-right:0.1px solid #ddd;
+    }
+    &__vbox{
+        height:3.8rem;
+        width:calc(100% - 1rem);
+        margin:1.3rem 0.5rem;
+        border:1px solid rgba(0,0,0, 0.3);
+        border-radius: 3px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        &--icon{
+            width:18%;
+            height:100%;
+            border-right:1px solid rgba(0,0,0,0.3);
+            padding: 0.3rem;
+            background-image: radial-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.1));
+            &-img{
+                background-size: auto 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                height:100%;
+                width:100%;
+            }
+            &-1{
+                background-image: url('../img/list_page.svg');
+            }
+            &-2{
+                background-image: url('../img/list_chart.svg');
+            }
+            &-3{
+                background-image: url('../img/list_day.svg');
+            }
+        }
+    }
+    &__headBox{
+        padding:1rem 0;
+        background-color: rgba(127, 171, 91, 0.22);
+        &-heading{
+            background-image: linear-gradient(to left, rgb(73, 163, 0), rgb(4, 65, 17));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.3rem;
+            &_head{
+                padding-left:1rem;
+                justify-content: start;
+            }
+        }
+    }
+    &__textBox{
+        background-color: rgba(127, 171, 91, 0.12);
+        &-text{
+            font-size: 1.8rem;
+            padding:1.4rem 1rem;
+            font-style: italic;
+        }
+    }
+    &__right{
+        height:100vh;
+        overflow: hidden;
+        &--chart{
+            width:96.5%;
+            position: relative;
+            margin:1.5rem auto;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 6px rgba(0,0,0,0.5);
+        }
+        &--text{
+            color:red;
+        }
+    }
+}

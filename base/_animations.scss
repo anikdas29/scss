@@ -1,0 +1,288 @@
+/*
+
+Need To check all animation
+
+*/
+
+
+//Animation Name: btn_animation-1 
+@keyframes btn_animation-1 {
+	40% {
+		-webkit-transform: scale3d(0.75, 0.75, 1);
+		transform: scale3d(0.75, 0.75, 1);
+	}
+	80% {
+		-webkit-transform: scale3d(1.15, 1.15, 1);
+		transform: scale3d(1.15, 1.15, 1);
+	}
+	100% {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+
+
+//Animation Name: btn_animation-2 
+@keyframes btn_animation-2 {
+	to {
+		opacity: 0;
+		-webkit-transform: scale3d(1.4, 1.4, 0);
+		transform: scale3d(1.4, 1.4, 0);
+	}
+}
+
+
+//Use For admin>index.php
+// @keyframes scaleUpDown{
+//     0%{
+//         transform: scale(1);
+//     }
+//     50%{
+//         transform: scale(1.2);
+//     }
+//     100%{
+//         transform: scale(1);    
+//     }
+// }
+
+// Animation Name-> fadeIn 
+// @keyframes fadeIn{
+//     0%{
+//         opacity:0;
+//         transform: scale(0.9);
+//     }
+//     75%{
+//         opacity: 0.9;
+//         transform: scale(1.05);
+//     }
+//     100%{
+//         opacity:1;
+//         transform: scale(1);
+//     }
+// }
+
+
+
+// Animation Name-> fadeOut 
+// @keyframes fadeOut{
+//     0%{
+//         transform: scale(1);
+//     }
+//     75%{
+//         opacity: 0.6;
+//         transform: scale(0.05);
+//     }
+//     100%{
+//         opacity:0;
+//         transform: scale(0);
+//     }
+// }
+
+
+
+//Animation Name-> rightToLeft 
+@keyframes rightToLeft{
+    0%{
+        opacity:0;
+        transform:translateX(100px);
+    }
+    80%{
+        transform:translateX(-10px);
+    }
+    100%{
+        opacity:1;
+        transform:translateX(0px);
+    }
+}
+.rightToLeft{
+    animation: rightToLeft 0.5s linear;
+}
+
+
+//Animation Name-> leftToRight 
+@keyframes leftToRight{
+    0%{
+        opacity:0;
+        transform:translateX(-100px);
+    }
+    80%{
+        transform:translateX(10px);
+    }
+    100%{
+        opacity:1;
+        transform:translateX(0px);
+    }
+}
+.leftToRight{
+    animation: leftToRight 0.5s linear;
+}
+
+
+@keyframes bottomToTop{
+    0%{
+        opacity:0;
+        transform:translateY(100px);
+    }
+    80%{
+        transform:translateY(-10px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0px);
+    }
+}
+.bottomToTop{
+    animation: bottomToTop 0.5s linear;
+}
+
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: 200% 0
+    }
+    100%{
+        background-position: -200% 0
+    }
+}
+
+
+
+// Animation Name-> bottomToTop 
+// @keyframes bottomToTop{
+//     0%{
+//         opacity:0;
+//         transform:translateY(-100px);
+//     }
+//     90%{
+//         transform:translateY(10px);
+//     }
+//     100%{
+//         opacity:1;
+//         transform:translateX(0px);
+//     }
+// }
+
+
+
+// Animation-name: topToBottom 
+// @keyframes topToBottom{
+//     0%{
+//         opacity:0;
+//         transform:translateY(100px);
+//     }
+//     90%{
+//         transform:translateY(-10px);
+//     }
+//     100%{
+//         opacity:1;
+//         transform:translateX(0px);
+//     }
+// }
+
+
+
+// Animation Name: topToBottomWithScale
+// @keyframes topToBottomWithScale{
+//     0%{
+//         opacity:0;
+//         transform: scale(0.5) translateY(60px);
+//     }
+//     60%{
+//         opacity:1;
+//         transform: scale(1) translateY(0px);
+//     }
+//     80%{
+//         transform: translateY(-10px);
+//     }
+//     100%{
+//         transform: translateY(0px);
+//     }
+// }
+
+
+
+// Animation Name: moveLeft 
+// @keyframes moveLeft{
+//     0%{
+//         opacity:0;
+//     }
+//     80%{
+//         opacity: 0.8;
+//         transform: translateX(-8px);
+//     }
+//     100%{
+//         opacity: 1;
+//         transform: translateX(0px);
+//     }
+// }
+
+
+
+// Animation-name: moveRight 
+// @keyframes moveRight{
+//     0%{
+//         opacity:0;
+//     }
+//     80%{
+//         opacity: 0.8;
+//         transform: translateX(8px);
+//     }
+//     100%{
+//         opacity: 1;
+//         transform: translateX(0px);
+//     }
+// }
+
+
+
+// Animation Name: zoomIn 
+// @keyframes zoomIn{
+//     0%{
+//         transform: scale(1);
+//     }
+//     50%{
+//         transform: scale(1.15);
+//     }
+//     100%{
+//         transform: scale(1);
+//     }
+// }
+
+
+
+// Animation Name: ratated360 
+// @keyframes ratated360{
+//     form{
+//         transform: rotateZ(0);
+//     }
+//     to{
+//         transform: rotateZ(360deg);
+//     }
+// }
+
+
+// Animation Name: removeIt 
+// @keyframes removeIt{
+//     to{
+//         opacity: 0;
+//         display: none;
+//     }
+// }
+
+
+
+// Animation Name: smallBitInRight 
+// @keyframes smallBitInRight{
+//     0%{
+//         transform: rotateZ(10deg);
+//     }
+//     50%{
+//         transform: rotateZ(30deg);
+//     }
+//     100%{
+//         transform: rotateZ(10deg);
+//     }
+// }
+
+

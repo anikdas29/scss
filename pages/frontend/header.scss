@@ -1,0 +1,195 @@
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    background: white;
+    top: 0;
+    left: 0;
+    height:9rem;
+    background:#2d3a4b;
+    border-bottom:4px solid rgba(var(--primary), 1);
+    @include respond('tab-1136'){
+        height: 8rem;
+    }
+    @include respond(){
+        height: 6rem!important;
+    }
+}
+
+.logoArea{
+    @include center();
+    height: 9rem;
+    justify-content: flex-start;
+    padding-left: 5px;
+    img{
+        width:auto;
+        max-height:7rem;
+        @include respond('tab-1136'){
+            height: 6rem;
+        }
+        @include respond(){
+            height: 4rem;
+        }
+    }
+    @include respond('tab-1136'){
+        height: 8rem;
+    }
+    @include respond(){
+        padding-left: 15px;
+        height: 6rem;
+    }
+}
+
+.menubar{
+    @include center();
+    justify-content: flex-end;
+    height: 9rem;
+    @include respond('tab-1136'){
+        height: 8rem;
+    }
+    @include respond(){
+        height: 6rem;
+    }
+    &-icon{
+        @include center();
+        padding-right: 5px;
+        &-image{
+            position: relative;
+            @include center();
+            margin: 0 0.5rem;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(var(--black), 0.2);
+            border-radius: 50%;
+            overflow: hidden;
+            @include center();
+            @include respond(){
+                height: 32px;
+                width: 32px;
+            }
+            span{
+                @include respond(){
+                    height: 20px;
+                    width: 20px;
+                }
+                background-color: rgba(var(--white), 0.8);
+            }
+        }
+    }
+    
+
+    &-text{
+        @include center();
+        .fastItem, .secondItem{
+            &-li{
+                list-style-type: none;
+                padding: 0 2px;
+                a{
+                    color: rgba(var(--white), 1);
+                    text-decoration: none;
+                    padding: 4px 10px;
+                }
+                &:hover{
+                    & > a{
+                        color: rgba(var(--primary), 1);
+                        background-color: rgba(var(--primary),1);
+                        color: rgba(var(--black), 1);
+                        border-radius: 8px;
+                    }
+                }
+                .active_page{
+                    color: rgba(var(--primary), 1);
+                    background-color: rgba(var(--primary),1);
+                    color: rgba(var(--black), 1);
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+}
+
+::placeholder{
+    color: rgba(var(--black), 0.5)!important;
+    @include respond('tab-1136'){
+        font-size: smaller!important;
+    }
+}
+
+
+#menubar:checked ~ .mobileMenu{
+    display: block;
+}
+#notification:checked ~ .notiArea{
+    display: block;
+}
+.mobileMenu, .notiArea{
+    position: absolute;
+    right: 0;
+    background-color: rgba(var(--white), 1);
+    width: 200px;
+    height: calc(100vh - 8rem);
+    z-index: 1;
+    &-list{
+        height: 100%;
+        border: 1px solid rgba(var(--black), 0.1);
+        &-item{
+            border-bottom: 1px solid rgba(var(--black), 0.1);
+            padding-block: 10px;
+            padding: 10px;
+            &-img{
+                height: 35px;
+                width: 35px;
+                border-radius: 50%;
+                border: 1px solid rgba(var(--black), 0.1);
+                padding: 4px;
+                display: inline-block;
+                float: left;
+            }
+            &-text{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 35px;
+                padding-left: 5px;
+                h6{
+                    font-size: 1.2rem;
+                    line-height: normal;
+                }
+                p{
+                    font-size: 0.9rem;
+                    line-height: normal;
+                    color: rgba(var(--black), 0.8);
+                }
+            }
+        }
+    }
+}
+#profile:checked ~ .profileArea{
+    display: flex;
+}
+.profileArea{
+    position: absolute;
+    right: 0;
+    background-color: rgba(var(--white), 1);
+    width: 200px;
+    height: calc(100vh - 8rem);
+    z-index: 1;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    &-image{
+        height: 140px;
+        width: 140px;
+        padding: 10px;
+    }
+    &-text{
+        font-size: x-large;
+        line-height: normal;
+        span{
+            display: block;
+            font-size: small;
+            text-align: center;
+            color: rgba(var(--black), 0.5);
+        }
+    }
+}

@@ -1,0 +1,111 @@
+.reg{
+    position: absolute;
+    top:50%;
+    right:40%;
+    height:38rem;
+    width:32rem;
+    z-index:20;
+    transform: translate(100%, -50%);
+    border-radius: 1rem;
+    overflow:hidden;
+    box-shadow: 5px 8px 10px rgba(0,0,0,0.1);
+    border:none;
+    background-image:linear-gradient(to bottom, rgba(255,255,255, 0.8), rgba(255,255,255,0.9));
+    
+    &_heading{
+        height:5rem;
+        background-image:linear-gradient(to right, rgb(28, 170, 189), rgb(10, 151, 233));
+        color:#fff;
+        padding:1rem 0.5rem;
+        border-bottom:2px solid rgb(94, 94, 94);
+    }
+    &_form{
+        padding: 0 8%;
+        position: relative;
+        &_group{
+            height:6rem;
+            position: relative;
+        }
+        &_label{
+            position: absolute;
+            top:65%;
+            left:4%;
+            transform: translate(-50%, -50%);
+            padding:0.5rem;
+            background:rgba(0,0,0,0.4);
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            border-radius: 50%;
+            height:3rem;
+            width:3rem;
+            &-icon{
+                color:rgba(255, 255, 255, 0.8);
+            }
+        }
+        &_input{
+            height:100%;
+            width:100%;
+            border:none;
+            position: relative;
+            &-fill{
+                height:100%;
+                width:100%;
+                border:none;
+                border-bottom:2px solid rgb(136, 136, 136);
+                background: transparent;
+                padding: 0 4rem;
+                padding-top:9%;
+                font-size:1.5rem;
+                color:#222;
+                &:focus{
+                    outline:none;
+                    
+                }
+            }
+            &-icon{
+                height:2.5rem;
+                width:2.5rem;
+                position: absolute;
+                top:70%;
+                right:0;
+                transform: translate(0%, -50%);
+                background-image: url('../img/alert.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+            &-tooltip{
+                visibility: hidden;
+                width: 9rem;
+                background-color: rgb(94, 94, 94);
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px 0;
+                position: absolute;
+                z-index: 1;
+                top: 2rem;
+                left: 76%;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                font-weight: 700;
+                letter-spacing: 1px;
+                text-align: center;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 100%;
+                    margin-top: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: transparent #6e6e6e transparent transparent;
+                }
+            }
+        }
+        &_submit{
+            position: absolute;
+            bottom:0;
+            left:0;
+        }
+    }
+}

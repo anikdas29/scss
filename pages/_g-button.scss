@@ -1,0 +1,179 @@
+.btn{
+    &,
+    &:link,
+    &:visited{
+        text-transform: uppercase;
+        text-decoration: none;
+        padding:1.2rem 3rem;
+        display:inline-block;
+        border-radius: 8rem;
+        position: relative;
+        font-size: $defult-font-size;
+        transition: all 0.2s;
+        font-weight: 600;
+        cursor: pointer;
+        
+
+        //only for button
+        border:none;
+    }
+    &:hover{
+        transform: translateY(-0.3rem);
+        box-shadow: 0 0 0.5rem rgba(0,0,0,0.2);
+        &::after{
+            transform: scaleX(1.5) scaleY(1.4);
+            opacity: 0;
+        }
+    }
+    &:active,
+    &:focus{
+        outline: none;
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0 0.8rem rgba(0,0,0,0.2);
+    }
+    &-white{
+        background:$c-white;
+        color:$c-dark;
+        &::after{
+            background-color: $c-white;
+        }
+    }
+    &-green{
+        background-color: $c-dark-green;
+        color:$c-white;
+        &::after{
+            background-color: $c-dark-green;
+        }
+    }
+    &-blue{
+        background:#5fa7fd;
+        color:$c-white;
+        &::after{
+            background-color: #5fa7fd;
+        }
+    }
+    &-dark-green{
+        background-color:$c-dark-green;
+        color:$c-white;
+        &::after{
+            background-color:$c-dark-green;
+        }
+    }
+    &-red{
+        background:$c-red;
+        color:$c-white;
+        &::after{
+            background-color: $c-red;
+        }
+    }
+    &-orrange{
+        background: $c-dark-orrange;
+        color:$c-white;
+        &::after{
+            background-color: $c-dark-orrange;
+        }
+    }
+    &::after{
+        content: "";
+        height:100%;
+        width:100%;
+        border-radius: 8rem;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index:-1;
+        transition: all 0.4s;
+    }
+}
+.btn-secondary{
+    &,
+    &:link,
+    &:visited{
+        text-transform: uppercase;
+        text-decoration: none;
+        padding:1rem 2.5rem;
+        display:inline-block;
+        border-radius: 1.2rem;
+        font-weight: 600;
+        position: relative;
+        font-size: 1.4rem;
+        transition: all 0.2s;
+        cursor: pointer;
+        &:not(:last-child){
+            margin-bottom: 4rem;
+        }
+        border:none;
+    }
+    &:hover{
+        box-shadow: 0 0 0.5rem rgba(0,0,0,0.1);
+    }
+    &:active,
+    &:focus{
+        outline: none;
+        box-shadow: 0 0 0.8rem rgba(0,0,0,0.1);
+    }
+    &-white{
+        background:$c-white;
+        color:$c-dark;
+        &::after{
+            background-color: $c-white;
+        }
+    }
+    &-green{
+        background-color:rgba($c-dark-green, 0.8);
+        color:$c-white;
+        &::after{
+            background-color: rgba($c-dark-green, 0.8);
+        }
+    }
+    &-dark-green{
+        background-color:$c-dark-green;
+        color:$c-white;
+        &::after{
+            background-color:$c-dark-green;
+        }
+    }
+    &-red{
+        background:$c-red;
+        color:$c-white;
+        &::after{
+            background-color: $c-red;
+        }
+    }
+    &-blue{
+        background:rgb(0,0,255);
+        color:$c-white;
+        &::after{
+            background-color: rgb(0,0,255);
+        }
+    }
+    &-orrange{
+        background: rgba($c-dark-orrange, 0.8);
+        color:$c-white;
+        &::after{
+            background-color: rgba($c-dark-orrange, 0.8);
+        }
+    }
+}
+
+
+.rem-sty{
+    border:1px solid rgba(15, 15, 15, 0.1);
+    border-radius: 0.8rem !important;
+    transition:none;
+    padding:0.8rem 2.2rem!important;
+    text-transform: capitalize;
+    &:hover{
+        transform: none;
+        &::after{
+            transform: none;
+        }
+    }
+    &:active,
+    &:focus{
+        transform: none;
+        &::after{
+            transform: none;
+        }
+    }
+}

@@ -1,0 +1,88 @@
+.heading_primary{
+    height: 20vh;
+    width:100%;
+    text-align: center;
+    padding-top:10rem;
+    &-main{
+        font-style: italic;
+        color:rgb(255, 255, 255);
+        text-shadow: 0rem 0rem 1rem rgba(0,0,0,1);
+        letter-spacing: 0.1rem;
+        word-spacing: -0.5rem;
+    }
+    &-sub{
+        margin-top:0.8rem;
+        font-style: italic;
+        color:rgb(199, 199, 199);
+        text-shadow: 0rem 0rem 1rem rgba(0,0,0,1);
+        letter-spacing: 0.1rem;
+    }
+}
+.heading_secondly{
+    width:100%;
+    display:flex;
+    justify-content: start;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.heading-thirdly{
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    color:rgb(70, 158, 70);
+    font-weight: 500;
+}
+
+.head-1{
+    display: inline-block;
+    background-image: linear-gradient(to right, #40147a, #3a4ca7);
+    color:transparent;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.head-2{
+    display: inline-block;
+    background-image: linear-gradient(to right, #222222, #3b3b3b);
+    color:transparent;
+    text-transform: initial;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.headingFrm{
+    background:rgba(0,0,0,0.05);
+    margin:0 1rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    clear:both;
+    &:not(:last-child){
+        margin-bottom: 1rem;
+    }
+    &__head-1{
+        color:rgba(2,2,2, 0.8);
+        display: inline-block;
+        text-transform: uppercase;
+        padding: 1rem 1.5rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    &__head-2{
+        color:rgba(2,2,2, 0.7);
+        display: inline-block;
+        text-transform: capitalize;
+        padding: 1rem;
+    }
+    &__head-3{
+        color:rgba(2,2,2, 0.5);
+        display: inline-block;
+        text-transform: capitalize;
+        padding: 1rem 0.8rem;
+    }
+    &__head-4{
+        color:rgba(2,2,2, 0.4);
+        display: inline-block;
+        text-transform: capitalize;
+        padding: 1rem 0.5rem;
+    }
+}

@@ -1,0 +1,38 @@
+.socialIcon{
+    &__link{
+        height:2.8rem;
+        width:2.8rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-around;
+        margin:0 0.6rem;
+        color:rgba($white, 0.8);
+        //background-color:rgba($white, 0.2);
+        //border:1px solid rgba($white, 0.9);
+        border-radius: 50%;
+        text-decoration: none;
+        transition: transform 0.2s;
+        @include respond('smbl'){
+            margin:0 0.3rem;
+        }
+        &--icon{
+            color:$white;
+            transition: transform 0.18s;
+            font-size: 1.8rem !important; //cz- need break the default font size
+        }
+        &:hover{
+            text-decoration: none;
+            //background-color: rgba($white, 0.85);
+            background-color: $sky;
+            transform: scale(1.3);
+            line-height: inherit;
+        }
+        &:hover &--icon{
+            color: $white;
+        }
+    }
+    
+    &__link:hover &--icon{
+        transform: scale(1.15);
+    }
+}

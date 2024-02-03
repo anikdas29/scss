@@ -1,0 +1,53 @@
+.blogview{
+    background-color: white;
+    margin: 2rem 0;
+    padding: 2.5rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    &__heading{
+        font-size: 3.2rem;
+        color:$txt-color-3;
+        font-family: "Baloo Da 2";
+        font-weight: 700;
+        line-height: 3.6rem;
+    }
+    &__info{
+        display: flex;
+        align-items: center;
+        color: $txt-color-9;
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        i{
+            font-size: 1.3rem!important;
+            padding-right: 0.2rem;
+        }
+    }
+    &__image{
+        width: 100%;
+        padding: 1rem;
+        height: auto;
+        overflow: hidden;
+    }
+    &__share{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 2.6rem;
+        text-transform: lowercase;
+        color: $txt-color-8;
+        margin-top: 2rem;
+    }
+    &__description{
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        p{
+            color: $txt-color-5;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+    }
+}

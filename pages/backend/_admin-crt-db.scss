@@ -1,0 +1,94 @@
+.crtDb{
+    background-color: #eee;
+    min-height: 100vh;
+}
+//Style foe crt_db page
+.heading_primary{
+    background-image: linear-gradient(to right, rgb(8, 97, 199), rgb(20, 154, 231), rgb(8, 97, 199));
+    display:block;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 40px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color:transparent;
+    text-align: center;
+    @include respond('mbl-560'){
+        font-size: 23px;
+    }
+}
+.contain_box{
+    width:440px;
+    margin: 0 auto;
+    background-color:rgb(245, 245, 245);
+    box-shadow: 0 0 10px rgba(0,0,0, 0.1);
+    border-radius: 4px;
+    margin-top: 15px;
+    border: 1px solid rgba(0,0,0,0.08);
+    @include respond('mbl-560'){
+        width: 100%;
+        border: 0;
+        margin:0;
+    }
+}
+
+.crt{
+    box-sizing: border-box;
+    padding: 1px;
+    &_group{
+        width:96%;
+        margin:5px auto;
+        padding: 5px 15px 15px 15px;
+        background-color: #fff;
+        box-shadow: 3px 5px 5px rgba(0,0,0,0.1);
+        border-radius: 3px;
+        input{
+            font-size:16px;
+            padding:2px 10px;
+            height:34px;
+            display:block;
+            width: 100%;
+            border:1px solid rgba(80,80,80, 0.4);
+            border-radius: 3px;
+        }
+        input:focus{
+            outline:none;
+            border:1px solid rgba(80,80,80, 0.5);
+            box-shadow: 0 0 8px rgba(0,0,0,0.2);
+        }
+    }
+    &_group:nth-child(1){
+        margin-top: 10px;
+    }
+    &_label{
+        color:rgb(10, 121, 7);
+        padding: 0;
+    }
+    &_submit{
+        background-color: transparent;
+        padding: 0;
+        width: 96%;
+        margin: 15px auto;
+        button{
+            background-color: rgb(59, 240, 150);
+        }
+    }
+}
+
+
+.btn, .btn:link, .btn:visited{
+    text-transform: uppercase;
+    text-decoration:none;
+    border:none;
+    display:inline-block;
+    padding:10px 18px;
+    border-radius: 8px;
+    font-size:15px;
+    font-weight: 500;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    position: relative;
+    cursor: pointer;
+    color: #fff;
+    //background-color: $green;
+}

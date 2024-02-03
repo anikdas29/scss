@@ -1,0 +1,65 @@
+.bloglogo{
+    align-items: flex-end;
+    justify-content: flex-start;
+    @include respond('xlmbl'){
+        padding: 1rem;
+    }
+}
+.blogadd{
+    min-width: 187.5px;
+    width: 750px;
+    min-height: 25px;
+    height: 100px;
+    margin: auto;
+    box-sizing: content-box;
+    border:1px solid $border-color;
+    color:$txt-color-8;
+    text-align: center;
+    line-height: 100px;
+    @include respond('sdsk'){
+        width: 562.5px;
+        height: 75px;
+        line-height: 75px;
+    }
+    @include respond('tab'){
+        width: 375px;
+        height: 50px;
+        line-height: 50px;
+    }
+    @include respond('xlmbl'){
+        width: 300px;
+        height: 40px;
+        line-height: 40px;
+    }
+    &__parent{
+        @include respond('mbl'){
+            order: -1;
+        }
+    }
+}
+
+.blghead{
+    width: 100%;
+    border-bottom: 2px solid $l-black;
+    &__heading{
+        display: inline-block;
+        color: $white;
+        padding: 0.4rem 1.2rem;
+        background-color: $l-black;
+        font-size: 1.6rem;
+        line-height: normal;
+        position: relative;
+        border-top-left-radius: 0.5rem;
+        &::after{
+            content: "";
+            height: 100%;
+            width: 4rem;
+            position: absolute;
+            left: 100%;
+            margin-left: -0.1rem;
+            top:0;
+            background-color: $l-black;
+            clip-path: polygon(100% 100%, 0 0, 0 100%);
+        }
+    }
+}

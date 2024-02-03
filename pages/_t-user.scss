@@ -1,0 +1,172 @@
+.usr{
+    overflow: hidden;
+    position: relative;
+    min-height: calc(100vh - 10vh);
+    z-index:1;
+    box-shadow: -1rem 0 1rem rgba(0,0,0,0.1);
+    &::before{
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    &__pfle{
+        margin: 3rem 2rem;
+        padding: 1.5rem;
+        border: 2px solid #7a73ff;
+        box-shadow: 0 0 8px #7a73ff;
+        border-radius: 0.8rem;
+        width: calc(100% - 4rem);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+        &--leftAra {
+            width: 16rem;
+            display: inline-block; 
+        }
+        &--rightAra{
+            width: calc(100% - 16rem);
+            display: inline-block; 
+        }
+        &--edit{
+           position: absolute;
+           bottom:1rem;
+           right:1rem;
+        }
+        &--image{
+            height: 14rem;
+            width: 12rem;
+            border: 1px solid #000;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            border-radius: 0.8rem; 
+        }
+        &--post{
+            display: inline-flex;
+            margin: 1.5rem 0;
+            justify-content: flex-start;
+            letter-spacing: 1px;
+            color: #000;
+            font-weight: bold;
+        }
+        &--icon {
+            color: #3c3891; 
+        }
+        &--txt {
+            margin-left: 1rem; 
+            cursor: context-menu;
+        }
+        
+        &--info {
+            font-size: 24px;
+            font-weight: bold;
+            color: #222;
+            font-family: varela;
+            letter-spacing: -0.4px;
+            height: 14rem;
+            width: 100%; 
+            &--cmnSty {
+                display: flex;
+                justify-content: flex-start;
+            }
+            
+            &-name {
+                font-size: 28px; 
+            }
+            &-email {
+                font-size: 16px;
+            }
+            &-contact {
+                font-size: 16px; 
+            }
+            &-about {
+                font-size: 16px; 
+            }
+        }
+    }
+    &__fill{
+        width:90%;
+        padding: 6px 12px;
+        margin:0 1.5rem;
+        letter-spacing: 1.2px;
+        font-size: 18px;
+        background: transparent;
+        border: transparent;
+        border-bottom: 2px solid rgba(34, 34, 34, 0.6);
+        border-radius: 4px;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.767);
+        &:focus{
+            outline: none;
+            border: transparent;
+            border-bottom: 2px solid #343434;
+            box-shadow: inset 0px -5px 2px rgba(0,0,0, 0.1);
+        }
+    }
+    &__upPfle{
+        margin: 3rem 2rem;
+        margin-top:0;
+        padding: 1.5rem;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 2px solid #7a73ff;
+        box-shadow: 0 0 8px #7a73ff;
+        border-radius: 0.8rem;
+        width: calc(100% - 4rem);
+        position: relative;
+        overflow: hidden;
+        &--formGroup{
+            display:flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 1.2rem 3rem;
+        }
+        &--submit{
+            position: absolute;
+            bottom:1rem;
+            right:2rem;
+
+        }
+    }
+
+    &__table{
+        margin:0 2rem;
+        margin-bottom:1.5rem;
+        &--addUsr{
+            text-align: center;
+            font-weight: bold;
+            font-family: varela;
+            font-size: 2rem;
+            color:rgb(12, 125, 177);
+            padding: 1rem 0;
+            cursor: context-menu;
+        }
+    }
+    &__addUser{
+        background-color: rgba(255, 255, 255, 0.5);
+        margin: 3rem 2rem;
+        padding: 1.5rem;
+        border: 2px solid rgba(34, 34, 34, 0.5);
+        box-shadow: 0 0 8px rgba(34, 34, 34, 0.5);
+        border-radius: 0.8rem;
+        width: calc(100% - 4rem);
+        position: relative;
+        overflow: hidden;
+        &--submit{
+            margin:2.5rem;
+        }
+    }
+    &__heading{
+        display: block;
+        font-size: 15px;
+        font-family: varela;
+        margin:0.8rem 0.4rem;
+        background-image: linear-gradient(to right, #000, #555);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        display:inline-block;
+    }
+}
